@@ -1,0 +1,14 @@
+
+img {
+    float: left;
+}
+
+div {
+    overflow: auto;
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 0px;
+    background-color: khaki;
+}
+

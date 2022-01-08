@@ -1,0 +1,22 @@
+body {
+    align-content: center;
+}
+
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+input, textarea {
+    margin-top: 3px;
+}
+
+textarea {
+    margin-bottom: 0;
+}
+
+
+
+
+
+

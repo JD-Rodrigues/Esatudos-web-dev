@@ -1,0 +1,38 @@
+
+.coluna {
+    float: left;
+    width: 25%;
+}
+
+.I {
+    background-color: aquamarine;
+}
+
+.II {
+    background-color: rgb(34, 88, 134);
+}
+
+.III {
+    background-color: rgb(207, 235, 51);
+}
+
+.IV {
+    background-color: rgb(247, 133, 57);
+}
+
+@media screen and (max-width: 400) {
+    .coluna {
+        width: 100%;
+    }    
+}
+
+/*Ao avançar nos estudos, pretendo descobrir o motivo de a regra acima não ter funcionado */
+
+@media screen and (max-width: 700px) {
+    .coluna {
+        width: 50%;
+    }    
+}
+
+
+

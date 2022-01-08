@@ -40,6 +40,46 @@ body {
     font-family:Georgia;
 }
 
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    float:right;
+    border: solid 3px whitesmoke;
+    background: lightcoral;
+    border-radius: 5px;
+    margin-top: 3px; 
+    width:99.5%; 
+}
+
+.menu li {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px; 
+    border-right: whitesmoke solid 1px;   
+}
+
+.menu li:hover {
+    background: whitesmoke;
+}
+
+.menu li:active {
+    background: rgb(180, 180, 180);
+}
+
+.menu li a {
+    margin: 8px;
+    font-family: Verdana;
+    text-decoration: none;
+    display: block;
+    color: rgb(1, 1, 90) ;
+    font-weight: bold;
+}
+
+.main1 {
+    margin-top: 80px;
+}
+
 .sec_title {
     text-align: center;
     color: whitesmoke;
@@ -92,10 +132,9 @@ footer {
 }
 
 .email {
-    list-style-image: url(Ícone-email.png) ;
+    list-style-image: url(Ícone-email.png);
 }
 
 .wpp {
     list-style-image: url(Ícone-wpp.png);
-    list-style-type: ;
 } 
