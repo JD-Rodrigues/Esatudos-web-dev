@@ -1,0 +1,15 @@
+.container {
+    background-color: blanchedalmond;
+}
+
+.container-sm {
+    background-color: cadetblue;
+}
+
+.container-md {
+    background-color: rgb(4, 18, 19);
+}
+
+.container-lg {
+    background-color: rgb(199, 247, 28);
+}

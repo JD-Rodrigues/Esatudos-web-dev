@@ -1,8 +1,16 @@
 
+img {
+    max-width:40%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
 .container-fluid {
     height: auto;
     background-color: skyblue;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .row {

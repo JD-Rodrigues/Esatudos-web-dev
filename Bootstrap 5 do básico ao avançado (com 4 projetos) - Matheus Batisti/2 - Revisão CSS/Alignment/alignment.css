@@ -1,0 +1,29 @@
+
+.p1 {
+    text-align: center;
+}
+
+.p2 {
+    display: flex;
+   justify-content:center;
+   
+}
+
+.p3 {
+    padding: 200px 0 200px 0;
+    text-align: center;
+}
+
+
+.p4 {
+    line-height: 400px;   
+    text-align: center;
+}
+
+
+img {
+    display: block;
+    margin: auto; 
+
+    
+}

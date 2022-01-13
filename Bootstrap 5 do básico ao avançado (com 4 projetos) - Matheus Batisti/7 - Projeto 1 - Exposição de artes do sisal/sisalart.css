@@ -1,0 +1,164 @@
+/*CONFIGURAÇÕES GERAIS*/
+
+* {
+    color: rgb(17, 16, 16);
+}
+
+body {
+    background-color:rgb(239, 255, 245)
+}
+
+.secondary-color {
+    color: #30473f;
+}
+
+.contrast-color {
+    color: #00ff9d;
+}
+
+i, a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.btn {
+    background-color: #111010;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color:#00ff9d;
+    color: #111010; 
+}
+
+/*HEADER*/
+
+#header {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: #d5e2dd solid 1px ;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#logo {
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+h1 {
+    margin: 20px 0 0px 0;
+    font-size: 50px;
+}
+
+#sub {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*NAVBAR*/
+
+#navbar {
+    padding: 5px;
+    margin: 5px auto;
+}
+
+#navbar a {
+    color:#30473f;
+    width: 100px;
+    padding: 10px 20px;   
+}    
+
+
+#navbar a:hover {
+    background-color:#111010;
+    color: whitesmoke;
+}
+
+#navbar a:active {
+    color: #00ff9d;
+} 
+
+/*MAIN POST*/
+
+.main-image {
+    height: 400px;
+    background-image:url('../7 - Projeto 1 - Exposição de artes do sisal/images/Bolo_Cicloturismo.jpg');
+    position: relative;
+}
+
+.image-center {
+    background-size: cover;
+    background-position: center;
+}
+
+.info-image-main {
+    background-color: whitesmoke;
+    padding: 20px;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+
+/*POSTS*/
+
+.posts-container h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.posts-container h2,
+.posts-container .col-md-6 {
+   margin-bottom: 50px;
+}
+
+
+.image-post {
+    height: 250px;
+    margin-bottom: 20px;   
+}
+
+.img1 {
+    background-image: url('../7 - Projeto 1 - Exposição de artes do sisal/images/Pintura\ em\ pedras.jpg');
+}
+.img2 {
+    background-image: url('../7 - Projeto 1 - Exposição de artes do sisal/images/Taturana.jpg');
+}
+.img3 {
+    background-image: url('../7 - Projeto 1 - Exposição de artes do sisal/images/Belzebu\ do\ Sertão.jpg');
+}
+.img4 {
+    background-image: url('../7 - Projeto 1 - Exposição de artes do sisal/images/Exército\ de\ enfermeiros.jpg');
+}
+.img5 {
+    background-image: url('../7 - Projeto 1 - Exposição de artes do sisal/images/Tatoo\ Deusa.jpg');
+}
+
+/*FOOTER*/
+
+footer {
+    border-top: 1px solid #d5e2dd;
+    height: 250px;
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+footer .redes-sociais {
+    margin: 40px;
+}
+
+.col-1 i {
+    font-size: 25px;
+}

@@ -1,0 +1,79 @@
+
+img {
+    max-width:40%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;  
+}
+
+.container {
+    margin-top: 50px;
+    height: auto;
+}
+
+.col {
+    height: auto;
+}
+
+i {
+    font-size: 80px;
+    display: block;
+    float: left;
+    margin-right: 20px;  
+}
+
+.bi-alarm {
+    color: violet;
+}
+
+.bi-megaphone {
+    color: turquoise;
+}
+
+.bi-people {
+    color: yellowgreen;
+}
+
+span {
+    display: block;
+    padding: 10px 0 10px 0;
+    
+}
+
+@media (min-width: 992px) {
+    span {
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    span {
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 576px) {
+    span {
+        padding-top: 30px;
+        
+    }
+}
+
+@media (max-width: 576px) {
+    span {
+        padding-top: 10;
+        font-size: 18px;
+    }
+    i {
+        font-size: 100px;
+    }
+
+    img {
+        max-width: 80%;
+    }
+}
+
+/*O QUE FOI FEITO:
+ - O display de ambos os elementos (ícone e span) foi definido para block;
+ - O ícone recebeu um float:left;
+ - Foram criadas media queries contendo size-font e padding-top específicos para cada breakpoint, a fim de manter o texto alinhado com o ícone nas diferentes larguras de tela.*/
