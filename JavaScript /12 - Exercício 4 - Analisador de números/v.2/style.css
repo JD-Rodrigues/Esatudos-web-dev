@@ -1,0 +1,45 @@
+
+body {
+    background-color: rgb(134, 134, 255);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+section {
+    width:450px;
+    height:auto;
+    background-color: cornsilk;
+    box-shadow: darkblue 3px 3px 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+#btn {
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+
+}
+
+#p {
+    color: black;
+}
+
+#add {
+    width: auto;
+    margin: auto;
+}
+select {
+    width: 200px;
+    height: 200px;
+}
+
+.res {
+    color: black;
+}
+
+footer {
+    font-size: small;
+}

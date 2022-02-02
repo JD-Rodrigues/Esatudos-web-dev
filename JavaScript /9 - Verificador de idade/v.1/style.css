@@ -1,0 +1,56 @@
+body {
+    background-color: turquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.copy {
+    font-size: 10px;
+}
+
+section {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+div {
+    padding: 10px;
+}
+
+#sexo {
+    width: 20px;
+}
+
+#btn {
+    display: block;
+    width: 70px;
+    margin: auto;
+}
+
+.res {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.divImg {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    
+}

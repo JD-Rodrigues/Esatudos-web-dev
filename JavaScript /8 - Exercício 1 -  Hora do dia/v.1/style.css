@@ -1,0 +1,32 @@
+
+h1, p{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+#frame {
+    height: 250px;
+    max-width: 400px;
+    margin: auto;
+    background-color: LavenderBlush;
+    padding-top: 10px;
+    
+}
+
+#imagem {
+    height: 150px;
+    max-width: 150px;
+    margin: auto;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+
+    
+}
+
+#hora {
+    font-family: Verdana;
+    font-size: 20px;
+}

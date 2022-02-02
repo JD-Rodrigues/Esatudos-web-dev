@@ -1,0 +1,68 @@
+body {
+    background-color: turquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.copy {
+    font-size: 10px;
+}
+
+section {
+    width: 400px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    padding: 20px;
+    
+}
+
+div {
+    padding: 10px;
+}
+
+#sexo {
+    width: 20px;
+}
+
+#contar {
+    display: block;
+    width: 70px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#res {
+    text-align: center;
+    height: 200px;
+    
+}
+
+select {
+    height: 190px;
+    
+}
+
+option {
+    color: black;
+}
+
+.divImg {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+img {
+    width: 150px;
+    height: 150px;   
+    margin-top: 20px;
+}

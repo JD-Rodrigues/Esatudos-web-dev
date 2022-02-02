@@ -11,21 +11,32 @@
     </head>
 
     <body>
-        <main>
-            <div class="container-fluid">
-                <div class="row row-col-4">
-                    <div class="col col-3 impar"></div>
-                    <div class="col col-3"></div>
-                    <div class="col col-3 impar"></div>
-                    <div class="col col-3"></div>
-                </div>
-                <div class="row row-col-4">
-                    <div class="col col-3 impar"></div>
-                    <div class="col col-3"></div>
-                    <div class="col col-3 impar"></div>
-                    <div class="col col-3"></div>
+  
+            <div class="container"></div>
+                <div class="row col 12">              
+                    <div class="col-6">
+                        <label for="donation" class="form-label">Selecione o valor para doação:</label>
+                        <div class="input-group">
+                            <span class="input-group-text">R$</span>
+                            <select name="donation" id="donation" class="form-select">
+                                <optgroup label="Doação premium">
+                                <option value="500">R$ 500,00</option>
+                                <option value="300">R$ 300,00</option>
+                                <optgroup label="Doação prata">
+                                <option value="100">R$ 100,00</option>
+                            </select>
+                            <input type="submit" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-floating col-6">
+                        <span>Email</span>
+                        <input type="email" class="form-control" id="mail" placeholder="Qualquer coisa">                        
+                        <label for="mail" class="form-label">Insira seu email:</label>
+                        
+                    </div>
                 </div>
             </div>
-        </main>
+        </div>
+
     </body>
 </html>

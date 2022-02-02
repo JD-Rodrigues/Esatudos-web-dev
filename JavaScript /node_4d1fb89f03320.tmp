@@ -1,0 +1,9 @@
+
+
+var lista = []
+
+
+
+for (c=0;c=10;2) {
+    console.log(c)
+}

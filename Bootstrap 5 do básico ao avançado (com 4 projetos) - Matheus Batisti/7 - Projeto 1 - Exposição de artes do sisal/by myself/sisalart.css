@@ -1,0 +1,190 @@
+
+/*Palheta de cores*/
+
+* {
+    color: #282828;
+}
+
+.secondary-color {
+    color: #959F93;
+}
+
+.highlight-color {
+    color: #3CFFA1;
+}
+
+.divisor-color {
+    color: #cfcfcf;
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+/*Centralizar, preencher e definir imagem como background da div*/
+
+.center-image {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Botão */
+
+.btn {
+    color: whitesmoke;
+    background-color: #282828;
+    margin: 0;
+}
+
+.btn:hover {
+    color: #282828;
+    background-color: #3CFFA1;
+}
+/*Header*/
+
+header {
+    height: auto;
+    border-bottom: 1px solid #cfcfcf ;
+    padding: 20px;
+}
+
+header p {
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+
+.logo {
+    width: 100px;
+    padding-top: 10px;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+/*Navbar*/
+
+
+#container-navbar {
+    margin: 10px auto;
+    padding 10px;
+}
+
+#container-navbar a {
+    text-decoration: none;
+    width: 100px;
+    padding: 10px 20px;
+    color: #3E453D;  
+}
+
+#container-navbar a:hover {
+    color: whitesmoke;
+    background-color: #282828;
+}
+
+#container-navbar a:active {
+    color: #3CFFA1;
+}
+
+/*Main post*/
+
+.main-image {
+    height: 400px;
+    background-image: url('../images/Bolo_Cicloturismo.jpg');
+    position: relative;
+}
+
+.main-image-info {
+    background-color: whitesmoke;
+    height: 40%;
+    width: auto;
+    padding: 20px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+
+@media (max-width:320px) {
+    .main-image-info {
+        width: 230px;
+    }
+    .main-image-info h3 {
+        font-size: 18px;
+    }
+    .main-image-info p {
+        font-size: 14px;
+    }
+}
+
+
+/*Posts*/
+
+.container-posts {
+    padding: 0;
+}
+
+.col-12 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.col-sm-12 {
+    margin-bottom: 50px;
+}
+
+.image-post {
+    height: 250px;
+    margin: 0 0 15px 0;  
+    padding: 0;  
+}
+
+.titulo .description {
+    margin: 0;
+}
+
+.img1 {
+    background-image: url('../images/Pintura\ em\ pedras.jpg');
+}
+
+.img2 {
+    background-image: url('../images/Taturana.jpg');
+}
+
+.img3 {
+    background-image: url('../images/Exército\ de\ enfermeiros.jpg');
+}
+
+.img4 {
+    background-image: url('../images/Belzebu\ do\ Sertão.jpg');
+}
+
+.img5 {
+    background-image: url('../images/Tatoo\ Deusa.jpg');
+}
+
+/*Footer*/
+
+footer {
+    height: 250px;
+    margin: auto;
+    border-top: 1px solid #cfcfcf;
+    padding: 40px;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.redes-sociais i {
+    font-size: 25px;    
+}
+

@@ -1,0 +1,9 @@
+
+
+
+
+
+
+for (c=0;c<11;c+1) {
+    console.log(c)
+}
