@@ -1,9 +1,0 @@
-
-
-
-
-
-
-for (c=0;c<11;2) {
-    console.log(c)
-}

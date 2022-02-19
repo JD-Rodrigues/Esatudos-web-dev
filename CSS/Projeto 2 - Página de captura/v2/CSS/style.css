@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: rgb(108, 0, 134);
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+#coverSection {
+    max-width: 80%;
+    margin: auto;
+    background-image: url('../assets/images/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 1%;
+    overflow: hidden;
+}
+
+#divForm {
+    width: 30%;
+    float: right;
+    box-sizing: border-box;
+    padding: 1%;
+    background-color: aliceblue;
+}
+
+@media screen and (min-width:1800px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #divForm {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #divForm {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #divForm {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #divForm {
+        width: 100%;
+    }
+}
+
+
+#divForm p {
+    margin-top: 4%;
+}
+
+form {
+    margin: 5% 0;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+input {
+    margin-bottom: 4%;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 4%;
+}
+
+.check {
+    display: inline-block;
+    width: 10%;  
+    
+}
+
+:checked + label {
+    font-weight: bolder;
+}
+
+#check1 {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+
+#check2 {
+    display: inline-block;
+    width: 50%;
+}
+
+#submit {
+    margin-top: 5%;
+    background-color: rgb(108, 0, 134);
+    color: white;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(29, 28, 28);
+}
+
+#profileDiv {
+    max-width: 70%;
+    margin: auto;
+    padding: 2%;
+    box-sizing: border-box;
+    color: white;
+    overflow: auto;
+}
+
+#profilePic {
+    width: 35%;
+    display: inline-block;
+    float: left;
+    margin: 2%;
+    box-sizing: border-box
+}
+
+#description {
+    margin: 2% ;
+    box-sizing: border-box;
+    margin-top: 6%;
+}
+#description p {
+    margin-top: 2%;
+    text-align: justify;
+    
+}
+
+img {
+    width: 100%;
+}
