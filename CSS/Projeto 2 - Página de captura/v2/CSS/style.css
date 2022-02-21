@@ -70,6 +70,9 @@ header {
     }
 }
 
+h3 {
+    text-transform: uppercase;
+}
 
 #divForm p {
     margin-top: 4%;
@@ -87,6 +90,10 @@ input {
     width: 100%;
     border: none;
     padding: 4%;
+}
+
+#name,#email {
+    background-color: #f3c5ff;
 }
 
 .check {
@@ -112,7 +119,7 @@ input {
 
 #submit {
     margin-top: 5%;
-    background-color: rgb(108, 0, 134);
+    background-color: #6c0086;
     color: white;
     text-transform: uppercase;
     font-size: 100%;
