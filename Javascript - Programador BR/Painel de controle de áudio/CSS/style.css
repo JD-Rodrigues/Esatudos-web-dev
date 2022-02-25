@@ -1,0 +1,29 @@
+div {
+    width: 70%;
+    height:auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 1%;
+    background-image: url('../assets/images/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+
+img {
+    width: 7%;
+    margin: 7% 0 0 2%;
+}
+
+@media screen and (max-width:600px) {
+    img {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    img {
+        width: 13%;
+    }
+}
