@@ -1,6 +1,7 @@
     
 document.querySelector('#calc').onclick = function(e) {
     e.preventDefault()
+    
     let crianças = document.querySelector('#crianças')
     let horas = document.querySelector('#horas')
     let res = document.querySelector('#res')

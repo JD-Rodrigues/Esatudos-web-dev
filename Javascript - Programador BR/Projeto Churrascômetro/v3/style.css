@@ -63,7 +63,7 @@ h1 {
 }
 
 
-input {
+input, #calc {
     display: block;
     width: 90%;
     margin: auto;
