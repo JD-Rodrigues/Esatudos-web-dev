@@ -1,0 +1,15 @@
+
+
+#screen {
+    width: 500px;
+    height: 500px;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+#player {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: blue;
+}

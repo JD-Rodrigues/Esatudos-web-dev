@@ -3,6 +3,11 @@ onload = function() {
 }
 
 let audio = document.querySelector("audio")
+let visor = document.querySelector('#divh1')
+let h1 = document.createElement('h1')
+let visorInfo = 0
+
+
 
 function play() {
     audio.play()
@@ -18,12 +23,18 @@ function pause() {
     play.setAttribute('onclick','play()')
 }
 
-function slow() {
-    audio.playbackRate -= 0.3
+function back() {
+    audio.playbackRate -= 0.1
+    visorInfo -= 1
+    visor.appendChild(h1)
+    h1.innerHTML = visorInfo
 }
 
-function fast() {
-    audio.playbackRate += 0.3
+function front() {
+    audio.playbackRate += 0.1
+    visorInfo += 1
+    visor.appendChild(h1)
+    h1.innerHTML = visorInfo    
 }
 
 function minVol() {
@@ -41,4 +52,12 @@ function mudo() {
 
 function maxVol() {
     audio.volume += 0.1
+}
+
+function hide() {
+    setTimeout(remove,3000)
+}
+
+function remove() {
+    visor.removeChild(h1)
 }
