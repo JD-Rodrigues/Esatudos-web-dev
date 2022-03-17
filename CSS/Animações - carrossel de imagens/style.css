@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#frame {
+    max-width: 640px;
+    min-width: 270px;
+    height: 360;    
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+@keyframes animation {
+    0%{ left:0;}
+    20%{left: 0;}
+    25% {left:-100%}
+    45% {left: -100%;}
+    50% {left: -200%;}
+    70% {left: -200%;}
+    75% {left: -300%;}
+    95%{left: -300%;}
+    100%{left: -400%;}
+
+}
+
+
+#images {
+    width: 500%;
+    display: flex;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+
+#images img {
+    width: 100%;
+    height: 100%;
+}
