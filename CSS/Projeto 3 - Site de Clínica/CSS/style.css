@@ -1,13 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
+    font-family: 'PT Sans'
 }
 
 .container {
     width: 990px;
     margin: auto;
     display: flex;
+}
+
+header .container {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 38px;
@@ -50,7 +53,7 @@ nav a {
     text-decoration: none;
     padding: 16px;
     margin-right: 6px;
-    color: #8ca0c6;
+    color: #8b9fc6;
 }
 
 nav a:hover {
@@ -65,5 +68,109 @@ nav a:active {
 #banner {
     width: 100%;
     height: 670px;
-    background-color: #42b3e5;
+    overflow: hidden;
 }
+
+#carousel {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+#carousel .container {
+    height: 433px;
+    border: #080000 solid 2px;
+    position: relative;
+    display: flex;
+}
+
+#carousel .carousel-text {
+    width: 39%;
+    height: 50%;
+    border: #080000 solid 2px;
+    position: relative;
+    margin-top: 11%;
+    color: white;
+    text-shadow: 0 1px #797065;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carousel-text span {
+    font-size: 72px;
+    line-height: 4.5rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.carousel-text p {
+    font-size: 24px;
+    line-height: 1.8rem;
+    position: relative;
+    top: 10px;
+}
+
+#carousel .img {
+    width: 25%;
+    height: 100%;
+}
+
+.img .container {
+    flex-direction: column;   
+}
+
+#slide-container {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#slider {
+    display: flex;
+    height: 100%;
+    border-bottom: white solid 1px;
+}
+
+#slide {
+    display: flex;    
+    color: white;
+}
+
+#slider1, #slider2, #slider3 {
+    width: 330px; 
+}
+
+
+#slide1, #slide2, #slide3 {
+    width: 330px; 
+}
+
+.container-caroussel1 #slider1{
+    border-bottom: white solid 3px;
+}
+
+.container-caroussel2 #slider2{
+    border-bottom: white solid 3px;
+}
+
+.container-caroussel3 #slider3{
+    border-bottom: white solid 3px;
+}
+
+
+#carousel .img1 {
+    background-image: url('../assets/images/img1.jpg');
+}
+
+#carousel .img2 {
+    background-image: url('../assets/images/img2.jpg');
+}
+
+#carousel .img3 {
+    background-image: url('../assets/images/img3.jpg');
+}
+
+
