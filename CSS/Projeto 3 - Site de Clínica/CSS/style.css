@@ -1,8 +1,34 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans'
 }
+
+body {
+    font-family: 'PT Sans';
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.description {
+    font-size: 80%;
+    color: #888888;
+    margin-top: 22px;
+    margin-bottom: 31px;
+    font-family: Helvetica;
+    line-height: 18px;
+}
+
+.footer-tags {
+    font-family: Helvetica;
+    font-size: 70%;
+    color: #979797;
+}
+
+
+
+/*container padrão*/
 
 .container {
     width: 990px;
@@ -37,7 +63,7 @@ header .container {
 
 #logo-name h1 {
     font-weight: normal;
-    font-size: 27px;
+    font-size: 30px;
     letter-spacing:0.8px;
 }
 
@@ -53,7 +79,8 @@ nav a {
     text-decoration: none;
     padding: 16px;
     margin-right: 6px;
-    color: #8b9fc6;
+    color: #888888;
+    font-family: Helvetica;
 }
 
 nav a:hover {
@@ -80,7 +107,6 @@ nav a:active {
 
 #carousel .container {
     height: 433px;
-    border: #080000 solid 2px;
     position: relative;
     display: flex;
 }
@@ -88,7 +114,6 @@ nav a:active {
 #carousel .carousel-text {
     width: 39%;
     height: 50%;
-    border: #080000 solid 2px;
     position: relative;
     margin-top: 11%;
     color: white;
@@ -120,7 +145,7 @@ nav a:active {
     flex-direction: column;   
 }
 
-#slide-container {
+.slide-container {
     width: 100%;
     height: 110px;
     display: flex;
@@ -128,35 +153,30 @@ nav a:active {
 
 }
 
-#slider {
+.slider {
     display: flex;
     height: 100%;
     border-bottom: white solid 1px;
 }
 
-#slide {
+.slide {
     display: flex;    
     color: white;
 }
 
-#slider1, #slider2, #slider3 {
-    width: 330px; 
+.slider1, .slider2, .slider3, .slide1, .slide2, .slide3, .card1, .card2, .card3{
+    flex: 1; 
 }
 
-
-#slide1, #slide2, #slide3 {
-    width: 330px; 
-}
-
-.container-caroussel1 #slider1{
+.container-caroussel1 .slider1{
     border-bottom: white solid 3px;
 }
 
-.container-caroussel2 #slider2{
+.container-caroussel2 .slider2{
     border-bottom: white solid 3px;
 }
 
-.container-caroussel3 #slider3{
+.container-caroussel3 .slider3{
     border-bottom: white solid 3px;
 }
 
@@ -173,4 +193,123 @@ nav a:active {
     background-image: url('../assets/images/img3.jpg');
 }
 
+.cards {
+    height: 211px;
+    background-color: #42b3e5;
+    position: relative;
+}
+
+.card1 {
+    background-color: #42b3e5;
+}
+
+.card2 {
+    background-color: #0284cf;
+}
+
+.card3 {
+    background-color: #3156a3;
+}
+
+main, aside {
+    margin-top: 26px;
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -211px;
+}
+main {
+    min-width: 200px;
+    flex: 2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    flex: 1;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+#aside-departament {
+    flex: 2;
+}
+
+#aside-contact {
+    flex: 1;
+}
+
+/* Gadget divisor de conteúdo */
+
+.title-category p {
+    font-size: 1.1rem;
+    margin-bottom: 7px;
+}
+.divisor-category {
+    width:50px;
+    height: 2px;
+    background-color: #42b3e5;
+}
+
+/* Gadget cabeçalho de previsualização de posts da home */
+
+.posts-prev {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 1000px;
+}
+
+.post-prev {
+    width: 300px;
+    border-bottom: 1px solid #e4e3e3;
+    padding-bottom: 27px;
+    margin-right: 30px;
+}
+
+.post-prev-header {
+    display: flex;
+    margin-top: 33px;
+}
+
+.post-prev-date {
+    width: 80px;
+    margin-right: 2px;
+    background-color: #3156a3;    
+}
+
+.post-prev-date-arrow {
+    background-image: url('../assets/images/arrow_date.png');
+    width: 5px;
+    height: 5px;
+    margin-bottom: 26px;
+}
+
+.post-prev-comments {
+    width: 33px;    
+    background-color: #42b3e5;
+}
+
+.post-prev-date,.post-prev-comments {
+    height: 33px;
+    color: white;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-prev-thumb img {
+    width: 100%;
+    margin-bottom: 22px;
+}
 

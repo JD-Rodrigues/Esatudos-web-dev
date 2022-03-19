@@ -1,6 +1,6 @@
 @keyframes slide {
     0%{left: 0;}
-    30%{left: 0;}
+    30.3%{left: 0;}
     33.3%{left: -100%;}
     63.3%{left: -100%;}
     66.6%{left: -200%;}
@@ -10,7 +10,7 @@
 
 #carousel {
     animation-name: slide;
-    animation-duration: 9s;
+    animation-duration: 18s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
