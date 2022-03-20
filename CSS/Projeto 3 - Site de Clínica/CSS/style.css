@@ -4,13 +4,16 @@
 }
 
 body {
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', Helvetica, Arial;
 }
 
 h1 {
     font-weight: normal;
 }
 
+a {
+    text-decoration: none;
+}
 .description {
     font-size: 80%;
     color: #888888;
@@ -20,10 +23,23 @@ h1 {
     line-height: 18px;
 }
 
-.footer-tags {
+.description-cards {
+    font-size: 80%;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-family: Helvetica;
+    line-height: 18px;
+}
+
+.footer-tags{
     font-family: Helvetica;
     font-size: 70%;
     color: #979797;
+}
+
+.footer-tags a {
+    text-decoration: underline;
 }
 
 
@@ -162,6 +178,7 @@ nav a:active {
 .slide {
     display: flex;    
     color: white;
+    font-size: 12px;
 }
 
 .slider1, .slider2, .slider3, .slide1, .slide2, .slide3, .card1, .card2, .card3{
@@ -215,6 +232,55 @@ main, aside {
     margin-top: 26px;
 }
 
+.card1, .card2, .card3 {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 16px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.button-read-more {
+    border: white solid 1px;
+    color: white;
+    width: 98px;
+    height: 29px;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 80%;
+    text-align: left;
+    font-family: Helvetica;
+    background-image: url('../assets/icons/icon_arrow_margin_right_white.png');
+    background-position:right;
+    background-size:18.5%;
+    background-repeat: no-repeat;
+}
+
+#content .card3 h1 {
+    margin-bottom: 3px;
+}
+
+.opening-hours-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.opening-hours-table .row {
+    display: flex;
+    justify-content: space-between;
+    height: 41px;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid #4367b1;
+}
+
+.day, .hour {
+    font-size: 80%;
+    font-family: Helvetica;
+}
 
 #content {
     display: flex;
@@ -262,8 +328,8 @@ aside {
 .posts-prev {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 1000px;
+    flex-direction: column; /* A escolha por colum foi para manter visualmente idêntico ao original (que contém posts sem imagem de capa e não fica bem com row). Mas, em um contexto funcional, será adequado trocar para row e padronizar os posts para que todos tenham capa. Fazendo isso, é aconselhável também mudar o height da div "posts-prev" para auto, para que ele comporte abaixo de si a coluna de posts da direita, em um menor tamanho de tela que exiba apenas 1 coluna.*/
+    height: 935px;
 }
 
 .post-prev {
@@ -313,3 +379,15 @@ aside {
     margin-bottom: 22px;
 }
 
+.show-all-posts {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-all-posts a {
+    font-family: Helvetica;
+    font-size: 80%;
+    color: #888888;;
+    margin-right: 30px;
+    border-bottom: dotted 1.5px;
+}
