@@ -7,13 +7,20 @@ body {
     font-family: 'PT Sans', Helvetica, Arial;
 }
 
-h1 {
+h1,h2 {
     font-weight: normal;
 }
 
 a {
     text-decoration: none;
 }
+
+.container {
+    width: 990px;
+    margin: auto;
+    display: flex;
+}
+
 .description {
     font-size: 80%;
     color: #727171;
@@ -21,15 +28,6 @@ a {
     margin-bottom: 31px;
     font-family: Helvetica;
     line-height: 19px;
-}
-
-.description-cards {
-    font-size: 80%;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-family: Helvetica;
-    line-height: 18px;
 }
 
 .footer-tags{
@@ -40,16 +38,6 @@ a {
 
 .footer-tags a {
     text-decoration: underline;
-}
-
-
-
-/*container padrão*/
-
-.container {
-    width: 990px;
-    margin: auto;
-    display: flex;
 }
 
 header .container {
@@ -78,7 +66,6 @@ header .container {
 }
 
 #logo-name h1 {
-    font-weight: normal;
     font-size: 30px;
     letter-spacing:0.8px;
 }
@@ -107,6 +94,8 @@ nav a:active {
     color: white;
     background-color: #42b3e5;
 }
+
+/* banner/carousel */
 
 #banner {
     width: 100%;
@@ -210,9 +199,10 @@ nav a:active {
     background-image: url('../assets/images/img3.jpg');
 }
 
+/* initial cards */
+
 .cards {
     height: 211px;
-    background-color: #42b3e5;
     position: relative;
 }
 
@@ -228,10 +218,6 @@ nav a:active {
     background-color: #3156a3;
 }
 
-main, aside {
-    margin-top: 26px;
-}
-
 .card1, .card2, .card3 {
     color: #ffffff;
     display: flex;
@@ -241,6 +227,15 @@ main, aside {
     padding-bottom: 28px;
     box-sizing: border-box;
     justify-content: center;
+}
+
+.description-cards {
+    font-size: 80%;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-family: Helvetica;
+    line-height: 18px;
 }
 
 .button-read-more {
@@ -259,7 +254,7 @@ main, aside {
     background-repeat: no-repeat;
 }
 
-#content .card3 h1 {
+#content .card3 h2 {
     margin-bottom: 3px;
 }
 
@@ -282,12 +277,19 @@ main, aside {
     font-family: Helvetica;
 }
 
+/* 2ND SECTION*/
+
 #content {
     display: flex;
     flex-direction: column;
     position: relative;
     top: -211px;
 }
+
+main, aside {
+    margin-top: 26px;
+}
+
 main {
     min-width: 200px;
     flex: 2;
@@ -500,7 +502,11 @@ aside {
     display: none;
 }
 
-/* Make an appointment */
+/* Make an appointment - contact aside */
+
+.contact {
+    margin-top: -13px;
+}
 
 .contact .media {
     height: 52px;
@@ -542,4 +548,57 @@ aside {
 
 .contact a:hover {
     border-bottom: solid #3156a3 1px;
+}
+
+/* FOOTER */
+
+.footer-cards {
+    height: 102px;
+    position: relative;
+}
+
+.footer-card1 {
+    background-color: #42b3e5;
+}
+
+.footer-card2 {
+    background-color: #0284cf;
+}
+
+.footer-card3 {
+    background-color: #3156a3;
+}
+
+.footer-card1, .footer-card2, .footer-card3 {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 24px;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 330px;
+}
+
+.description-footer-cards {
+    font-size: 80%;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: Helvetica;
+    line-height: 18px;
+    background-image: url('../assets/icons/icon_arrow_margin_right_white.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size:7%;
+    width: 90%;
+}
+
+.description-footer-cards:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color:#202020;
+    margin-top: -161px;
 }
