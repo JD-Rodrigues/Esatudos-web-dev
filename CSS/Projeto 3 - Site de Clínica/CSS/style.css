@@ -524,14 +524,14 @@ aside {
     padding-bottom: 18px;
 }
 
-.phone-icon, .email-icon, .form-icon {
+.phone-icon, .email-icon, .form-icon, .gplus-icon,.facebook-icon, .twitter-icon {
     width: 30px;
     height: 30px;
     overflow: hidden;
     margin-right: 12px;
 }
 
-.contact img {
+.contact img, footer img {
     width: 100%;
     height: 200%;
 }
@@ -551,6 +551,17 @@ aside {
 }
 
 /* FOOTER */
+
+footer {
+    background-color:#202020;
+    margin-top: -161px;
+}
+
+footer a, footer a:visited {
+    color:#cccccc;
+}
+
+ /*Footer cards */
 
 .footer-cards {
     height: 102px;
@@ -598,7 +609,161 @@ aside {
     text-decoration: underline;
 }
 
-footer {
-    background-color:#202020;
-    margin-top: -161px;
+/* Footer columns */
+
+.container-footer {
+    display: flex;
+}
+
+.column-footer {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+}
+
+.column-footer a:hover {
+    text-decoration: underline;
+}
+
+.container-footer .category {
+    color: white;
+    font-style: normal;
+}
+
+/* Address/contact */
+
+.description-footer-column {
+    font-size: 80%;
+    color: #918d8b;
+    margin-bottom: 5px;
+    font-family: Helvetica;
+    line-height: 18px;
+    font-style: normal;
+}
+
+.description-footer-column .intro {
+    margin-top: -6px;
+}
+
+.address-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 21px;
+    margin-top: 27px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#contact-icons-footer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+#contact-icons-footer div {
+    margin-right: 6px;
+}
+
+/* Latest posts */
+
+.category-sliders-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliders-footer {
+    display: flex;
+}
+
+.left-slider-footer, .right-slider-footer {
+    width: 30px;
+    height: 30px;
+    border: solid 1px rgb(65, 65, 65);
+    margin-left: 2px;
+}
+
+.left-slider-footer:hover, .right-slider-footer:hover {
+    border: solid 1px #42b3e5;
+}
+
+.left-slider-footer {
+    background-image: url('../assets/icons/icon_arrow_left_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right-slider-footer {
+    background-image: url('../assets/icons/icon_arrow_right_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.latest-posts{
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.frame-latest-posts-footer {
+    height: 210px;
+    margin-top: -6px;
+    overflow: hidden;
+}
+
+.latest-posts-list-footer {
+    display: flex;
+    flex-direction: column;
+    height: 400%;
+}
+
+.latest-post-footer {
+    font-size: 80%;
+    font-family: Helvetica;
+    line-height: 18px;
+    color: #b59a7e;
+    margin-bottom: 23px;
+    
+}
+
+.latest-post-footer , .latest-tweets-list-footer .tweet-footer{
+    background-image: url('../assets/icons/icon_arrow_right_white.png');
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+}
+
+.latest-post-footer p, .latest-tweets-list-footer p {
+    margin-left: 18px;
+}
+
+.time-passed-lastest-posts-footer, .time-passed-lastest-tweet-footer {
+    font-size: 90%;
+    font-family: Helvetica;
+    line-height: 18px;
+    color: #0284cf;
+}
+
+/* Latest tweets */
+
+.frame-latest-tweets-footer {
+    height: 285px;
+    margin-top: -6px;
+    position: relative;
+}
+
+.latest-tweets-list-footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.latest-tweet-footer {
+    font-size: 80%;
+    font-family: Helvetica;
+    line-height: 18px;
+    color: #918d8b;
+    margin-bottom: 23px;    
 }
