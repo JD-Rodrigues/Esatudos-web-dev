@@ -1,6 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /*colors*/
+    --blue1: #42b3e5;
+    --blue2: #0284cf;
+    --purple: #3156a3;
+    --darkDesc: #727171;
+    /*sizes*/
+    --postTagsSize: 70%;
 }
 
 body {
@@ -13,6 +24,14 @@ h1,h2 {
 
 a {
     text-decoration: none;
+}
+
+.posts-prev a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+.posts-prev a:visited {
+    color: inherit;
 }
 
 .container {
@@ -70,12 +89,26 @@ header .container {
     letter-spacing:0.8px;
 }
 
+
+nav select {
+    display:none;
+    width: 214px;
+    background-color: #dddddd;
+    border: none;
+    text-transform: uppercase;
+}
+
+nav select:focus{
+    outline: 0;
+}
+
 nav ul{
     display: flex;
     list-style-type: none;
     justify-content: center;
     text-transform: uppercase;
     font-size: 13px;
+    max-width: 100%;
 }
 
 nav a {
@@ -90,9 +123,9 @@ nav a:hover {
     color: #080000;
 }
 
-nav a:active {
+nav a:active, #home { /* a inserção do id "home" foi apenas para mostrar o estilo da opção ativa do menu, visto que isso ainda não pode ser visto na prática, por ainda não haver outras páginas. Deverá ser removido quando houver pelo menos mais uma página do site.*/
     color: white;
-    background-color: #42b3e5;
+    background-color: var(--blue1);
 }
 
 /* banner/carousel */
@@ -160,7 +193,8 @@ nav a:active {
 
 .slider {
     display: flex;
-    height: 100%;
+    height: 3%;
+    margin-top: 87px;
     border-bottom: white solid 1px;
 }
 
@@ -300,9 +334,10 @@ main {
 
 aside {
     flex: 1;
-    height: 700px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 #aside-departament {
@@ -321,7 +356,7 @@ aside {
     margin-bottom: 7px;
 }
 .divisor-category {
-    width:50px;
+    width:1px;
     height: 2px;
     background-color: #42b3e5;
     margin-bottom: 33px;
@@ -383,6 +418,14 @@ aside {
     margin-bottom: 22px;
 }
 
+.post-prev-title a{
+    color: black;
+}
+
+.post-prev-title a:visited{
+    color: black;
+}
+
 .show-all-posts {
     display: flex;
     justify-content: flex-end;
@@ -408,6 +451,14 @@ aside {
     margin-bottom: 21px;
 }
 
+.card-details, .card-timetable {
+    cursor: pointer;
+}
+
+.card-body-aside-menu {
+    margin: 20px 0;
+}
+
 .department-menu-div {
     display: flex;
     justify-content: space-between;
@@ -417,6 +468,7 @@ aside {
     height: 42px;
     box-sizing: border-box;
     border-bottom: 1px solid #e4e3e3;
+    cursor: pointer;
 }
 
 .card-header-aside-menu {
@@ -439,12 +491,7 @@ aside {
     box-sizing: border-box;
 }
 
-.card-body-aside-menu {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    align-items: center;
-}
+
 
 .pic-card-aside-menu {
     width: 76px;
@@ -452,7 +499,8 @@ aside {
     background-image: url('../assets/images/pic-card-health.jpg');
     background-position: center;
     background-size: cover;
-    margin-right: 20px;
+    margin-right: 15px;
+    float: left;
 }
 
 
@@ -462,7 +510,7 @@ aside {
     font-size: 80%;
     color: #727171;
     font-family: Helvetica;
-    line-height: 18px;
+    line-height: 15px;
 }
 
 .card-footer-aside-menu {
@@ -534,6 +582,7 @@ aside {
 .contact img, footer img {
     width: 100%;
     height: 200%;
+    position: relative;
 }
 
 .contact span {
@@ -559,6 +608,10 @@ footer {
 
 footer a, footer a:visited {
     color:#cccccc;
+}
+
+footer .footer-cards a:visited {
+    color: white;
 }
 
  /*Footer cards */
@@ -683,7 +736,7 @@ footer a, footer a:visited {
 .left-slider-footer, .right-slider-footer {
     width: 30px;
     height: 30px;
-    border: solid 1px rgb(65, 65, 65);
+    border: solid 1px rgba(65, 65, 65, 0.6);
     margin-left: 2px;
 }
 
@@ -711,13 +764,15 @@ footer a, footer a:visited {
 .frame-latest-posts-footer {
     height: 210px;
     margin-top: -6px;
-    overflow: hidden;
+    overflow:hidden;
+    position: relative;
 }
 
 .latest-posts-list-footer {
     display: flex;
     flex-direction: column;
-    height: 400%;
+    position: relative;
+    width: 100%;
 }
 
 .latest-post-footer {
@@ -752,6 +807,7 @@ footer a, footer a:visited {
     height: 285px;
     margin-top: -6px;
     position: relative;
+    overflow: hidden;
 }
 
 .latest-tweets-list-footer {
@@ -767,3 +823,27 @@ footer a, footer a:visited {
     color: #918d8b;
     margin-bottom: 23px;    
 }
+
+#footer-copy {
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: solid 1px rgba(65, 65, 65, 0.6);
+    font-size: 69%;
+    font-family: Helvetica;
+    color: #918d8b;
+    line-height: 0px;    
+}
+
+.top-shortcut {
+    width: 33px;
+    text-align: left;
+    background-image: url('../assets/icons/icon_arrow_top_white.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+

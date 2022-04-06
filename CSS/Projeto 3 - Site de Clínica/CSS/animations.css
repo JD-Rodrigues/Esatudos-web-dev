@@ -15,15 +15,67 @@
     animation-fill-mode: forwards;
 }
 
-/**/
+@keyframes flash {
+    0%{opacity: 0;}
+    3%{opacity: 0;}
+    10%{opacity: 0;}
+    13%{opacity: 1;}
+    33.3%{opacity: 1;}
+    63.3%{opacity: 1;}
+    66.6%{opacity: 1;}
+    95%{opacity: 1;}
+    97% {opacity: 0;}
+    100%{opacity: 0;}
+}
 
-/*@keyframes slide {
-    0%{left: 0;}
-    15%{left: 0;}
-    18.3%{left: -100%;}
-    48.3%{left: -100%;}
-    51.6%{left: -200%;}
-    81.6%{left: -200%;}
-    85%{left: -300%;}
-    100%{left: 300%;}
-}*/
+.carousel-title-desc {
+    animation-name: flash;
+    animation-duration: 6s;
+    animation-delay: -500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-up {
+    from {top: 0%;}
+    to {top: -100%}
+}
+
+.contact img:hover, footer img:hover {
+    animation-name: slide-up;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+    from {top: -100%;}
+    to {top: 0%}
+}
+
+.contact img:not(:hover), footer img:not(:hover) {
+    animation-name: slide-down;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+.card1, .footer-card1 {
+    opacity: 0;
+    transition: 600ms 200ms;
+    z-index: 2;
+}
+
+.card2, .card3, .footer-card2, .footer-card3 {
+    position: relative;
+    left: -100%;
+    transition: 1s;
+    z-index: 1;
+}
+
+.card3, .footer-card3 {
+    left: -50%;
+    z-index: 0;
+}
+
+.divisor-category {
+    transition: 1s;
+}
+

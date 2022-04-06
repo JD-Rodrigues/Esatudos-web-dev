@@ -1,0 +1,276 @@
+
+@media screen and (max-width: 1000px){
+    .container {
+        width: 750px;
+        margin: auto;
+    }
+
+    nav a {
+        padding: 12px 7px;
+    }
+
+    #banner {
+        height: 410px;
+    }
+
+    .img {
+        background-size: cover;
+    }
+
+    .carousel-text {
+        top: -35px;
+    }
+
+    .carousel-text span {
+        font-size: 58px;
+        bottom: 5px;
+        line-height: 4rem;
+    }
+
+    .carousel-text p {
+        font-size: 22px;
+        top: 5px;        
+    }
+
+    .cards {
+        height: 202px;
+    }
+
+    .card1, .card2, .card3 {
+        padding: 23px;
+        padding-bottom: 22px;
+        padding-top: 11px;
+    }
+    .description-cards {
+
+        margin-top: 13px;
+        margin-bottom: 17px;
+    }
+
+    #content {
+        top: -105px;
+        margin-bottom: 100px;
+    }
+
+    aside {
+        width: 250px;
+    }
+
+    .posts-prev {
+        flex-direction: row;
+    }
+
+    .post-prev {
+        width: 100%;
+    }
+
+    .divisor-category {
+        margin-bottom: 26px;
+    }
+
+    .posts-prev {
+        height: 1780px;
+    }
+    
+    .show-all-posts {
+        margin-top: 0;
+    }
+
+    .frame-latest-tweets-footer {
+        height: 315px;
+    }
+
+    #footer-copy {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 754px) {
+    .container {
+        width: 465px;
+    }
+
+    header .container{
+        height: 6px;
+        display: flex;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    nav select {
+        display:block;
+    }
+
+    #banner {
+        height: 315px;
+    }
+
+    .img {
+        background-size: cover;
+    }
+
+    .carousel-text span {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    #content {
+        top: -62px;
+        margin-bottom: 0;
+    }
+
+    #main-aside{
+        margin-top: 300px;
+        flex-direction: column;
+    }
+
+    .post-prev {
+        margin-right: 0;
+    }
+
+    aside {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-details, .card-timetable{
+        margin-top: 12px;
+    }
+    
+    footer {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+    }
+
+    .footer-cards, .container-footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-footer {
+        margin-top: 250px;
+    }
+
+    .footer-card1,.footer-card2,.footer-card3 {
+        width: 100%;
+        height: 110px;
+    }
+
+    .column-footer {
+        width: 100%;
+    }
+
+    .frame-latest-tweets-footer {
+        height: 210px;
+    }
+
+}
+
+@media screen and (max-width: 469px) {
+    .container {
+        width: 300px;
+        padding-top: 30px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-banner {
+        margin-top: 35px;
+    }
+
+    header #logo {
+        margin-top: -20px;
+    }
+
+    header select {
+        margin-top: 8px;
+        width: 300px;
+    }
+
+    #banner {
+        height: 212px;
+    }
+
+    .carousel-text span {
+        font-size: 24px;
+        line-height: 2rem;
+    }
+
+    .carousel-text p {
+        font-size: 18px;
+        top: 3px;
+        line-height: 1.3rem;        
+    }
+
+    #content {
+        top: -80px;
+    }
+
+    .carousel-text p {
+        width: 300px;
+    }
+
+    #main-aside {
+        margin-top: 326px;
+    }
+
+    main {
+        margin-top: 26px;
+    }
+
+    footer {
+        margin-top: -40px;
+    }
+    
+    .footer-cards {
+        padding-top: 0px;
+    }
+
+    .container-footer {
+        margin-top: 190px;
+    }
+
+    .latest-tweets {
+        margin-top: 0px;
+    }
+
+    .frame-latest-tweets-footer {
+        height: 300px;
+    }
+
+    #footer-copy {
+        height: 0%;
+        padding-top: 0;
+    }
+
+    .show-all-posts {
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        width: 200px;
+    }
+
+    #banner {
+        height: 160px;
+    }
+
+    .show-all-posts {
+        margin-top: 150px;
+    }
+
+}
