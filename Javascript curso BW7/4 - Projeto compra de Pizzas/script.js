@@ -1,8 +1,6 @@
 onload = function() {
     const qsel = (path) => this.document.querySelector(path)
 
-    const qselAll = (path) => this.document.querySelectorAll(path)   
-
     for (item in pizzaJson) {
         const pizzaItem = qsel('.models .pizza-item').cloneNode(true)
 
@@ -20,6 +18,7 @@ onload = function() {
 }
 
 const qsel = (path) => this.document.querySelector(path)
+const qselAll = (path) => this.document.querySelectorAll(path)   
 let modal = qsel('.pizzaWindowArea')
 let modalQt = parseInt(modal.querySelector('.pizzaInfo--qt').innerHTML)
 let modalKey = 0
@@ -55,6 +54,12 @@ function openModal(e){
     qsel('.pizzaInfo--cancelButton').addEventListener('click', closeModal)
     qsel('.pizzaInfo--cancelMobileButton').addEventListener('click', closeModal)
 
+    qsel('.menu-openner').addEventListener('click',()=>{
+        if (cart.length>0) {
+            showCart()
+        }
+    })
+
     let modalSizes = document.querySelectorAll('.pizzaInfo--size')
 
     for (size in modalSizes) {
@@ -67,7 +72,6 @@ function openModal(e){
         }
 
         modalSizes[size].addEventListener('click',highlightSize)
-        modalSizes[size].querySelector('span').addEventListener('click',highlightSize)
     }
 }
 
@@ -111,7 +115,9 @@ function closeModal() {
             size,
             id:pizzaJson[modalKey].id,
             qt:modalQt,
-            price:pizzaJson[modalKey].price
+            price:pizzaJson[modalKey].price,
+            img:pizzaJson[modalKey].img,
+            name:pizzaJson[modalKey].name
         })
     }   
     closeModal()
@@ -123,13 +129,16 @@ function closeModal() {
 
  function updateCart() {
     qsel('.cart').innerHTML = ""
+    qsel('.menu-openner span').innerHTML = cart.length
+    let subtotal = 0
+    let desconto = 0
+    let total = 0
 
-    cart.map((product)=>{
-        products = pizzaJson.find((pizza)=>pizza.id==product.id)
+    cart.map((product, index)=>{
         
         let cartItem = qsel('.cart--item').cloneNode(true)
 
-        cartItem.querySelector('img').src = products.img
+        cartItem.querySelector('img').src = product.img
 
         let sizeLetter;
 
@@ -148,10 +157,10 @@ function closeModal() {
                 break;
         }
 
-        cartItem.querySelector('.cart--item-nome').innerHTML = `${products.name} (${sizeLetter})`
+        cartItem.querySelector('.cart--item-nome').innerHTML = `${product.name} (${sizeLetter})`
 
         cartItem.querySelector('.cart--item--qt').innerHTML = product.qt  
-
+      
         let CartQt = parseInt(cartItem.querySelector('.cart--item--qt').innerHTML)
 
         let UpDownCartQt = CartQt
@@ -159,35 +168,56 @@ function closeModal() {
         cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', function () {
             if (UpDownCartQt>1) {
                 UpDownCartQt--
-                cartItem.querySelector('.cart--item--qt').innerHTML = UpDownCartQt
+                product.qt=UpDownCartQt
+                updateCart()
+            }else {
+                product.qt=0
+                cart.splice(index, 1)
+                updateCart() 
+                if (cart.length==0){
+                    hideCart()  
+                } 
+                           
             }
         })
         
         cartItem.querySelector('.cart--item-qtmais').addEventListener('click', function () {
             UpDownCartQt++
-            cartItem.querySelector('.cart--item--qt').innerHTML = UpDownCartQt
+            product.qt=UpDownCartQt
+            updateCart()
             
         })
+       
 
+        subtotal+=product.price*product.qt
+        desconto = (subtotal/100*10).toFixed(2)
+        total = (subtotal-desconto).toFixed(2)
+
+        qsel('.menu-closer').addEventListener('click', hideCart)
         
+        qselAll('.subtotal span')[1].innerHTML = `R$ ${subtotal.toFixed(2)}`
+        qselAll('.desconto span')[1].innerHTML = desconto
+        qselAll('.total span')[1].innerHTML = total
 
         qsel('.cart').append(cartItem)  
+
+        
             
 
         
     })
     
     
-    console.log(cart) 
+    console.log(subtotal) 
     
 }
 
 function showCart() {
-    let show = qsel('aside').classList.contains('show')
+    qsel('aside').classList.add('show')
+    qsel('aside').style.left=0
+}
 
-    if (show==false) {
-        qsel('aside').classList.add('show')
-    }
-
-    
+function hideCart() {
+    qsel('aside').classList.remove('show')
+    qsel('aside').style.left=`${100}vw`     
 }
