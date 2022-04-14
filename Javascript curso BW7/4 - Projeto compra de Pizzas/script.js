@@ -24,6 +24,7 @@ let modal = qsel('.pizzaWindowArea')
 let modalQt = parseInt(modal.querySelector('.pizzaInfo--qt').innerHTML)
 let modalKey = 0
 let cart = []
+let subtotal = 0
 
 function openModal(e){
     e.preventDefault()
@@ -33,6 +34,9 @@ function openModal(e){
 
     let key = e.target.closest('.pizza-item').getAttribute('data-key')
     modalKey=key
+
+    modalQt = 1
+    modal.querySelector('.pizzaInfo--qt').innerHTML = 1
 
     modal.querySelector('img').src=e.target.closest('img').src
 
@@ -93,8 +97,8 @@ function closeModal() {
     }, 150)
 }
 
-function adToCart() {
-    let size = modal.querySelector('.selected').getAttribute('data-key')
+ function adToCart() {
+    let size = parseInt(modal.querySelector('.selected').getAttribute('data-key'))
     let identifier = `${modalKey}${size}`
 
     let repeatedItemIdex = cart.findIndex((prod)=>prod.identifier==identifier)
@@ -106,16 +110,76 @@ function adToCart() {
             identifier,
             size,
             id:pizzaJson[modalKey].id,
-            qt:modalQt
+            qt:modalQt,
+            price:pizzaJson[modalKey].price
         })
-    }
-    
-    
-
-    console.log(cart)
-   
+    }   
     closeModal()
     showCart()
+    updateCart()
+    
+    
+}
+
+ function updateCart() {
+    qsel('.cart').innerHTML = ""
+
+    cart.map((product)=>{
+        products = pizzaJson.find((pizza)=>pizza.id==product.id)
+        
+        let cartItem = qsel('.cart--item').cloneNode(true)
+
+        cartItem.querySelector('img').src = products.img
+
+        let sizeLetter;
+
+        switch (product.size) {
+            case 0:
+                sizeLetter = 'P';
+                break;
+            case 1:
+                sizeLetter = 'M';
+                break;
+            case 2:
+                sizeLetter = 'G';
+                break;
+            default: 
+                sizeLetter = 'O'           
+                break;
+        }
+
+        cartItem.querySelector('.cart--item-nome').innerHTML = `${products.name} (${sizeLetter})`
+
+        cartItem.querySelector('.cart--item--qt').innerHTML = product.qt  
+
+        let CartQt = parseInt(cartItem.querySelector('.cart--item--qt').innerHTML)
+
+        let UpDownCartQt = CartQt
+        
+        cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', function () {
+            if (UpDownCartQt>1) {
+                UpDownCartQt--
+                cartItem.querySelector('.cart--item--qt').innerHTML = UpDownCartQt
+            }
+        })
+        
+        cartItem.querySelector('.cart--item-qtmais').addEventListener('click', function () {
+            UpDownCartQt++
+            cartItem.querySelector('.cart--item--qt').innerHTML = UpDownCartQt
+            
+        })
+
+        
+
+        qsel('.cart').append(cartItem)  
+            
+
+        
+    })
+    
+    
+    console.log(cart) 
+    
 }
 
 function showCart() {
@@ -124,4 +188,6 @@ function showCart() {
     if (show==false) {
         qsel('aside').classList.add('show')
     }
+
+    
 }
