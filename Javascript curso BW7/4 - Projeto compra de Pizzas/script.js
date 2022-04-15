@@ -6,7 +6,7 @@ onload = function() {
 
         pizzaItem.setAttribute('data-key', item)
         pizzaItem.querySelector('img').src=pizzaJson[item].img
-        pizzaItem.querySelector('.pizza-item--price').innerHTML=`R$${pizzaJson[item].price.toFixed(2)}`
+        pizzaItem.querySelector('.pizza-item--price').innerHTML=`A partir de <strong>R$ ${pizzaJson[item].price[0].toFixed(2)}</strong>`
         pizzaItem.querySelector('.pizza-item--name').innerHTML=pizzaJson[item].name
         pizzaItem.querySelector('.pizza-item--desc').innerHTML=pizzaJson[item].description
         
@@ -14,16 +14,20 @@ onload = function() {
         products.append(pizzaItem)
 
         pizzaItem.querySelector('a').addEventListener('click', openModal) 
+         
     }    
+    
 }
 
 const qsel = (path) => this.document.querySelector(path)
 const qselAll = (path) => this.document.querySelectorAll(path)   
 let modal = qsel('.pizzaWindowArea')
 let modalQt = parseInt(modal.querySelector('.pizzaInfo--qt').innerHTML)
+let modalPrice = Number(modal.querySelector('.pizzaInfo--actualPrice').innerHTML)
 let modalKey = 0
 let cart = []
-let subtotal = 0
+
+
 
 function openModal(e){
     e.preventDefault()
@@ -43,7 +47,7 @@ function openModal(e){
 
     modal.querySelector('.pizzaInfo--desc').innerHTML=e.target.closest('.pizza-item').querySelector('.pizza-item--desc').innerHTML
 
-    modal.querySelector('.pizzaInfo--actualPrice').innerHTML=e.target.closest('.pizza-item').querySelector('.pizza-item--price').innerHTML
+    modal.querySelector('.pizzaInfo--actualPrice').innerHTML= pizzaJson[modalKey].price[2].toFixed(2)
 
     modal.querySelector('.pizzaInfo--qtmenos').addEventListener('click',ModalQtMenos)
 
@@ -63,8 +67,6 @@ function openModal(e){
     let modalSizes = document.querySelectorAll('.pizzaInfo--size')
 
     for (size in modalSizes) {
-        modalSizes[size].querySelector('span').innerHTML=pizzaJson[key].sizes[size]
-
         modalSizes[size].classList.remove('selected')
 
         if (modalSizes[size].getAttribute('data-key')==2) {
@@ -76,9 +78,15 @@ function openModal(e){
 }
 
 function highlightSize(e) {
+    e.stopPropagation()
+
     modal.querySelectorAll('.pizzaInfo--size').forEach(element => element.classList.remove('selected'))
 
     e.target.closest('.pizzaInfo--size').classList.add('selected')
+    modalPrice = pizzaJson[modalKey].price[e.target.getAttribute('data-key')]
+
+    modal.querySelector('.pizzaInfo--actualPrice').innerHTML=modalPrice
+
 }
 
 function ModalQtMenos(){
@@ -115,15 +123,14 @@ function closeModal() {
             size,
             id:pizzaJson[modalKey].id,
             qt:modalQt,
-            price:pizzaJson[modalKey].price,
+            price:modal.querySelector('.pizzaInfo--actualPrice').innerHTML,
             img:pizzaJson[modalKey].img,
             name:pizzaJson[modalKey].name
         })
     }   
     closeModal()
-    showCart()
+    showCart()    
     updateCart()
-    
     
 }
 
@@ -133,6 +140,7 @@ function closeModal() {
     let subtotal = 0
     let desconto = 0
     let total = 0
+    
 
     cart.map((product, index)=>{
         
@@ -206,10 +214,12 @@ function closeModal() {
 
         
     })
-    
-    
-    console.log(subtotal) 
-    
+    qsel('.back-to-shopping').addEventListener('click', hideThanks)
+        
+    qsel('.cart--finalizar').addEventListener('click', showThanks)   
+
+       
+     
 }
 
 function showCart() {
@@ -219,5 +229,25 @@ function showCart() {
 
 function hideCart() {
     qsel('aside').classList.remove('show')
-    qsel('aside').style.left=`${100}vw`     
+    qsel('aside').style.left=`${100}vw`    
+     
+}
+
+function showThanks() {
+    updateCart()
+    qsel('.thanks-screen').style.display='flex'
+    setTimeout(()=>qsel('.thanks-screen').style.opacity=1,200)
+    
+    
+    
+
+}
+
+function hideThanks() {
+    hideCart()
+    cart.splice(0,cart.length)
+    setTimeout(()=>qsel('.thanks-screen').style.display='none',300)
+    qsel('.thanks-screen').style.opacity=0
+    
+    
 }
