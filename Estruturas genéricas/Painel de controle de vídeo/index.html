@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de controle de vídeo</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <video src="./assets/videos/Salve Baby (citação Vamos fugir) - Ivete Sangalo, Iza.mp4" poster="./assets/images/Ivete-Iza.jpg">
+        </video>
+        <div id="controls">
+            <img class="mid" src="./assets/icons/atrasar.png" onclick = "atrasar()" alt="">
+            <img class="mid" id="play" src="./assets/icons/play.png" onclick = "comecar()" alt="">
+            <img class="mid" src="./assets/icons/adiantar.png" onclick = "adiantar()" alt="">
+        </div>
+        <div id="controls2">
+            <img class="down" src="./assets/icons/repetir.png" onclick = 'repeat()'>
+            <img class="down" src="./assets/icons/rebobinar.png" onclick = "diminVel()">
+            <img class="down" src="./assets/icons/stop.png" onclick="parar()">
+            <img class="down" src="./assets/icons/avanco-rapido.png" onclick = "aumentVel()">
+            <img class="down" src="./assets/icons/diminuir volume.png" onclick = "menosVol()">
+            <img class="down" src="./assets/icons/aumentar-o-volume.png" onclick = "maisVol()">
+            <img class="down" src="./assets/icons/mudo.png" onclick = "mudo()">
+
+        </div>
+    </div>
+    
+</body>
+<script src="./JS/script.js"></script>
+</html>
