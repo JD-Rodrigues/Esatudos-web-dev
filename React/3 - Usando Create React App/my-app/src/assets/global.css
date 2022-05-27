@@ -16,3 +16,23 @@
     text-decoration: none;
     color: black;
 }
+
+.header2 {
+    height:60px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu2 {
+    display: flex;
+    gap: 20px;
+}
+
+
+.menu2 a{
+    color: blanchedalmond;    
+    text-decoration: none;
+}

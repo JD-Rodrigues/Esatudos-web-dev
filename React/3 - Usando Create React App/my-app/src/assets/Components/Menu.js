@@ -4,7 +4,7 @@ export function Menu(props) {
     return (
         <div id="lista-menu">
             {props.list.map((link, index)=>{
-                return <a href='#' id={index}>{link}</a>
+                return <a href='#' key={index}>{link}</a>
             })
             }
         </div>
