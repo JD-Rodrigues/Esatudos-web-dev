@@ -1,0 +1,21 @@
+.task-div {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+:checked + label {
+    text-decoration: line-through;
+}
+
+.remove {
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/x.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
