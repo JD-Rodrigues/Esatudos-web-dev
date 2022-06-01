@@ -1,11 +1,12 @@
-
+import { TaskItem } from "./TaskItem"
+import css from '../components_css/Form.css'
 
 export default function Form(props) {
     function addTask(e) {
         e.preventDefault()
         const inputTask = document.querySelector('.input').value
         if (inputTask) {
-          props.setTasks([...props.tasks, inputTask])
+          props.setTasks([...props.tasks, new TaskItem(inputTask)])
           document.querySelector('.input').value = ''
         }    
       }

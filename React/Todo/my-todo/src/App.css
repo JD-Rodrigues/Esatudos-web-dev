@@ -12,7 +12,6 @@
   flex-direction: column;
   align-items: center;
   border: solid 1px blue;
-  gap: 15px;
 }
 
 .container .input-div {

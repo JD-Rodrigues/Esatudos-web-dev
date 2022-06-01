@@ -5,8 +5,24 @@
     align-items: center;
 }
 
-:checked + label {
+.task-div li {
+    list-style: none;
+}
+
+#check{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    
+}
+
+.checked{
     text-decoration: line-through;
+    background-image: url('../images/check.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .remove {
