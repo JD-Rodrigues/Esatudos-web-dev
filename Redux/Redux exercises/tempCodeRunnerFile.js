@@ -1,1 +1,1 @@
-store.getState()
+'./assets/reducers.js'
