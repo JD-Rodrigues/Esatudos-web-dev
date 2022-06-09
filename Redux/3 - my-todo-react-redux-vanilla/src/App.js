@@ -3,9 +3,9 @@ import './App.css';
 import Task from './assets/components/Task'
 import Form from './assets/components/Form'
 import ModalDelete from './assets/components/ModalDelete';
-import { Provider, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {updateTasks} from './assets/redux/actions/tasksActions'
-import store from './assets/redux/store'
+
 
 function App() {
   const tasks = useSelector(globalState=>globalState.tasksReducer.state)
@@ -27,11 +27,11 @@ function App() {
  
   return (
     <div className="container">
-      <Provider store={store}>
+      
         <Form />
         <Task />
         {modalDelete && <ModalDelete />}
-      </Provider>
+      
     </div>
   );
 }
