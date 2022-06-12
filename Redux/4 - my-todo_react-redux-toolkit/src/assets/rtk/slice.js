@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    tasks:[{task:'cagar',id:1,done:false}],
+    tasks:[],
     modalDelete: false,
-    target: null
+    target: ''
 }
 
 const slice = createSlice({
