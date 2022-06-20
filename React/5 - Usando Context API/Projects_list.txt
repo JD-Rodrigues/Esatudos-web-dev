@@ -4,10 +4,10 @@ Project types:
  - todo
  
 Configs to each type of project:
-- Funcional components with hooks and Provider in the App - TODO
-- Class components with contextType and Provider in the App
-- Funcional components using Context.Consumer - TODO
-- Class components using Context.Consumer
-- Functional component with Provider Function (with {children})
-- Class component with Provider Function (with {children})
+- Funcional components with hooks and Provider in the App - AUTH
+- Class components with contextType and Provider in the App - AUTH
+- Funcional components using Context.Consumer - AUTH
+- Class components using Context.Consumer - AUTH
+- Functional component with Provider Function (with {children}) - AUTH
+- Class component with Provider Function (with {children}) - AUTH
 
