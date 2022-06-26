@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.home {
+  font-weight: bold;
+  color: blue;
+}
+
+.about-us {
+  font-weight: bold;
+  color: rgb(145, 212, 68);
+}
+
+.cases {
+  font-weight: bold;
+  color: rgb(255, 81, 0);
+}
+
+.contact {
+  font-weight: bold;
+  color: rgb(145, 83, 54);
+}
+
+.user {
+  font-weight: bold;
+  color: rgb(0, 255, 221);
+}
+
+.not-found {
+  font-weight: bold;
+  color: rgb(255, 0, 157);
+}
+
+.index {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  
+}
+
+.login {
+  font-weight: bold;
+  color: rgb(17, 61, 23);
+  
+}
