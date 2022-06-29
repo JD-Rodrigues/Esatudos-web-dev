@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  padding: 10px;
+}
+
+.App img {
+  width: 150px;
+}
+
+
