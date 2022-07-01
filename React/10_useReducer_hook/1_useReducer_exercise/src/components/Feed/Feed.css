@@ -1,0 +1,38 @@
+
+.feed {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+    border-bottom: 2px solid brown;
+}
+
+
+
+.icons {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+.icons .x-delete {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/images/x.delete.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icons .edit {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/images/edit.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
