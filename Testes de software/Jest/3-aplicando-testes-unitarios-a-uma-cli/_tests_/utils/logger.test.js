@@ -1,4 +1,4 @@
-import loggers, { COLORS } from '../../src/utils/logger.js'
+import loggers, { COLORS } from 'utils/logger.js'
 
 const {log, success, error} = loggers
 

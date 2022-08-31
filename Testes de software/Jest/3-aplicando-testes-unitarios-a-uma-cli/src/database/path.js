@@ -7,3 +7,4 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const databasePath = resolve(__dirname, '../../database.json');
 
 export default databasePath;
+ 

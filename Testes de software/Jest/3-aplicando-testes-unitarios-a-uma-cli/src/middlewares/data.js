@@ -1,4 +1,4 @@
-import { validateArgs } from '../utils/args.js';
+import { validateArgs } from 'utils/args.js';
 
 // Valida valor de "data" para cada operação com seus campos necessários
 export const validateDataMiddleware = fields => args => {
