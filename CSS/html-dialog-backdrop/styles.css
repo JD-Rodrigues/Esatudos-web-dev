@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-color: rgb(147, 205, 255);
+}
+
+form {
+    width: 300px;
+    height: 200px;
+    border: blue solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    background-color: aliceblue;
+}
+
+dialog {
+    border: none;
+    padding: 0;
+}
+
+dialog::backdrop {
+    background-color: gold;
+}
