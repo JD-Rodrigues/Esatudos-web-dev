@@ -2,7 +2,7 @@
 const readAllContacts = require('./services').readAllContacts
 const addContact = require('./services').addContact
 const express = require('express')
-const { deleteContact } = require('./services')
+const { deleteContact, updateContact } = require('./services')
 
 
 
@@ -10,6 +10,7 @@ const { deleteContact } = require('./services')
 module.exports = app => {
   app.use(express.json())
   const router = require('express').Router()
+
   router.get('/', async (req, res)=> {
     const data = await readAllContacts()
     res.json(data)
@@ -22,6 +23,11 @@ module.exports = app => {
     
     res.status(201).send({requisition: req.body})  
      
+  })
+
+  router.put('/', (req, res) => {
+    updateContact(req.body.id, req.body.newValues)
+    res.status(201).send({requisition: req.body})  
   })
 
   router.delete('/', (req, res) => {

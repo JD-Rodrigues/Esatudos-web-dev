@@ -182,6 +182,6 @@ function deleteContact(id) {
 // deleteContact(7)
 // addContact("Zé", "ze@contact.com")
 // readAllContacts().then(console.log)
-updateContact(29, {name:"Cota", email: "contato@cota.com"})
+// updateContact(29, {name:"Cota", email: "contato@cota.com"})
 
-module.exports = {readAllContacts, addContact, deleteContact}
+module.exports = {readAllContacts, addContact, updateContact ,deleteContact}
