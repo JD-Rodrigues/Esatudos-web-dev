@@ -87,6 +87,7 @@ function updateContact(id, newValues) {
 
   try {
     const keys = Object.keys(newValues)
+    const values = Object.values(newValues)
     let columns;
     keys.forEach((key,index)=> {
       switch (index) {
@@ -100,8 +101,16 @@ function updateContact(id, newValues) {
           columns += `${key} = ?,`
       }
     })
-
-    conn.query(`UPDATE contacts3 SET ${columns} WHERE id = ${id}`)
+    // const query = `UPDATE people2.contacts3 SET ${columns} WHERE id = ${id}`
+    conn.query(`UPDATE people2.contacts3 SET ${columns} WHERE id = ${id}`, values, (err, res, meta) => {
+      if(err) {
+        console.log(err)
+      } else {
+        console.log(res)
+        console.log(meta)
+        
+      }
+    })
   } catch(error) {
     if (error) console.log(error);
     conn.rollback(error => {
