@@ -1,17 +1,23 @@
 const express = require('express');
 const cors = require('cors');
+const readAllContacts = require('./services');
+const routes = require('./routes')
+
 
 const app = express()
 
+
 var corsOptions = {
-  origin: 'http://localhost:8081'
+  origin: '*'
 };
 
-app.use(cors(corsOptions))
+app.use(cors({origin: '*'}))
+routes(app)
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.get('/', (req, res)=> {
-  res.json({message:'Welcome to back-end!'})
-})
 
-app.listen(3000, ()=>console.log('Server ON'))
+
+
+app.listen(3002, ()=>console.log('Server ON'))
+
+module.exports = app
