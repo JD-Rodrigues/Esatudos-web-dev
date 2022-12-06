@@ -179,7 +179,7 @@ function deleteContact(id) {
 // console.log(Object.values(obj))
 
 
-// deleteContact(7)
+// deleteContact(12)
 // addContact("Zé", "ze@contact.com")
 // readAllContacts().then(console.log)
 // updateContact(29, {name:"Cota", email: "contato@cota.com"})

@@ -1,0 +1,42 @@
+main {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+header, section{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.members__table {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: black solid;
+}
+
+.member {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+}
+
+.name, .email {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border: solid grey;
+}
+ .name {
+  border-right: none;
+ }
