@@ -179,9 +179,11 @@ function deleteContact(id) {
 // console.log(Object.values(obj))
 
 
-// deleteContact(12)
+deleteContact(42)
 // addContact("Zé", "ze@contact.com")
 // readAllContacts().then(console.log)
 // updateContact(29, {name:"Cota", email: "contato@cota.com"})
+
+
 
 module.exports = {readAllContacts, addContact, updateContact ,deleteContact}
