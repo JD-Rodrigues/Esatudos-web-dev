@@ -18,6 +18,8 @@ const fillTable = async () => {
 
   document.querySelectorAll('.edit').forEach(btn=> btn.addEventListener('click', ()=> {    
     selectedId = btn.getAttribute('data-id')
+    document.querySelector('#update__dialog .input__name').value = btn.closest('li').querySelector('.name').innerHTML
+    document.querySelector('#update__dialog .input__email').value = btn.closest('li').querySelector('.email').innerHTML
     openModal('#update__dialog')
   }
   ))  
@@ -93,14 +95,14 @@ document.querySelector('#delete__dialog .submit__button').addEventListener('clic
 
 document.querySelector('#update__dialog .cancel__button').addEventListener('click', (e)=> {
   e.preventDefault()
-  formReset('#update_dialog')
+  formReset('#update__dialog')
   closeModal('#update__dialog')
   
 })
 
 document.querySelector('#update__dialog form').addEventListener('submit', async (e)=> {
   e.preventDefault()
-  await update(selectedId, {name: `${name}`, email: `${name}`})
+  await update(selectedId, {name: name, email: email})
   await fillTable()
   formReset('#update__dialog')
   closeModal('#update__dialog')  
