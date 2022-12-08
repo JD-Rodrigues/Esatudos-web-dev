@@ -17,18 +17,28 @@ const fillTable = async () => {
   })
 
   document.querySelectorAll('.edit').forEach(btn=> btn.addEventListener('click', ()=> {    
+
     selectedId = btn.getAttribute('data-id')
+
     document.querySelector('#update__dialog .input__name').value = btn.closest('li').querySelector('.name').innerHTML
+
     document.querySelector('#update__dialog .input__email').value = btn.closest('li').querySelector('.email').innerHTML
+
     openModal('#update__dialog')
+
   }
+
   ))  
 
-  document.querySelectorAll('.delete').forEach(btn=> btn.addEventListener('click', ()=> {    
+  document.querySelectorAll('.delete').forEach(btn=> btn.addEventListener('click', ()=> {   
+
     selectedId = btn.getAttribute('data-id')
+
     openModal('#delete__dialog')       
   }
+
   ))   
+
 }
 
 window.addEventListener('load', async ()=> {
@@ -46,10 +56,6 @@ const closeModal = (id) => {
 const formReset = (id)=> {
   document.querySelector(`${id} form`).reset()
 }
-
-
-// window.addEventListener('load', openModal)
-
 
 const addNewContact = async () => {
   await create(name, email)
@@ -140,7 +146,7 @@ const update = async (id, newValues)=> {
 
 
 const remove = async (id) => {
-  await axios.delete(`http://localhost:3002/${id}`)//.then(res=>console.log(res.status))
+  await axios.delete(`http://localhost:3002/${id}`)
 }
 
 const drawContactItem = (contact)=> {
@@ -153,7 +159,3 @@ const drawContactItem = (contact)=> {
     <div class="email">${contact.email}</div>
   </li>`
 }
-
-
-
-remove(44)
