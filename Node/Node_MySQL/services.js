@@ -159,27 +159,10 @@ function deleteContact(id) {
   
 }
 
-// const obj = {nome:"Agripino", idade:76, cidade: "Santa Cruz", altura:171, criança: false}
-
-// const keys = Object.keys(obj)
-// let columns;
-// keys.forEach((key,index)=> {
-//   switch (index) {
-//     case 0:
-//       columns = `${key} = ?,`;
-//       break;
-//     case keys.length - 1:
-//       columns += `${key} = ?`;
-//       break;
-//     default:
-//       columns += `${key} = ?,`
-//   }
-// })
-
-// console.log(Object.values(obj))
 
 
-deleteContact(42)
+
+// deleteContact(42)
 // addContact("Zé", "ze@contact.com")
 // readAllContacts().then(console.log)
 // updateContact(29, {name:"Cota", email: "contato@cota.com"})

@@ -30,8 +30,8 @@ module.exports = app => {
     res.status(201).send({requisition: req.body})  
   })
 
-  router.delete('/', (req, res) => {
-    deleteContact(req.body.data.id)
+  router.delete('/:id', (req, res) => {
+    deleteContact(req.params.id)
     res.status(201).send({requisition: req.body.data})  
   })
 

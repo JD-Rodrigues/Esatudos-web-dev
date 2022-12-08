@@ -58,7 +58,7 @@ section {
   cursor: pointer;
 }
 
-.name {
+.name, .delete, .edit {
   border-right: none;
  }
 
