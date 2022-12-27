@@ -2,7 +2,7 @@ import { getPostsIds } from "../../lib/posts"
 import { getPostData } from "../../lib/posts"
 
 export async function getStaticPaths() {
-    const paths = getPostsIds() // retorna os nomes dos arquivos sem caracteres especiais, prontos para compor a basename de uma url. Porém, não retorna como uma simples lista, mas na estrutura [{params:{post: string}}, {params:{post: string}},...]
+    const paths = await getPostsIds() // retorna os nomes dos arquivos sem caracteres especiais, prontos para compor a basename de uma url. Porém, não retorna como uma simples lista, mas na estrutura [{params:{post: string}}, {params:{post: string}},...]
      
 
     return {
@@ -16,9 +16,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}){ 
     const dataPost = await getPostData(params.post) //recebe a string com o nome de um arquivo, lê seu conteúdo, parseia com grey-matter e devolve um objeto contendo seus metadados e conteúdo.
     
-    return {
-        props: {
-            dataPost
+    if(dataPost) {
+        return {
+            props: {
+                dataPost 
+            } 
         }
     }
 }
